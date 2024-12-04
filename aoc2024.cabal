@@ -1,0 +1,36 @@
+cabal-version:      3.4
+name:               aoc2024
+version:            0.1.0.0
+license:            BSD-3-Clause
+license-file:       LICENSE
+author:             Trey Wood
+maintainer:         edwinjwood3rd@gmail.com
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+
+common warnings
+    ghc-options: -Wall
+
+common aoc-day
+    -- other-extensions:
+    build-depends:
+        base ^>=4.20.0.0,
+        containers ^>=0.6.0,
+        megaparsec ^>=9.6.0,
+        aoc2024
+
+library
+    import:           warnings
+    exposed-modules:  Aoc
+    build-depends:
+        base ^>=4.20.0.0,
+        megaparsec ^>=9.6.0,
+    hs-source-dirs:   lib
+    default-language: GHC2024
+
+executable day-1
+    import:
+        aoc-day,
+        warnings
+    main-is:          Main.hs
+    hs-source-dirs:   day-1
