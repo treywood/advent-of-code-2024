@@ -34,3 +34,10 @@ executable day-1
         warnings
     main-is:          Main.hs
     hs-source-dirs:   day-1
+
+executable day-2
+    import:
+        aoc-day,
+        warnings
+    main-is:          Main.hs
+    hs-source-dirs:   day-2
